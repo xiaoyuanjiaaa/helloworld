@@ -14,7 +14,7 @@
 	 class="org.springframework.format.support.FormattingConversionServiceFactoryBean" />
 	
 	<context:annotation-config></context:annotation-config>
-	<context:component-scan base-package="demo.web"></context:component-scan>
+	<context:component-scan base-package="web"></context:component-scan>
 	
 	<!--  视图解析器 -->
 	<bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
