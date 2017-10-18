@@ -1,0 +1,15 @@
+	用户表users
+uid name pwd 头像 等级
+	地址表address
+id 电话 邮编 详细地址 uid
+	商品类别表sort
+sortid name prentid //内部外键
+	商品表shop
+shopid name 图片 价格 售价 保质期 sortid 厂家 收藏（是否） -数量-
+	订单信息表order
+orderid 订单编号 数量 时间 单价 总价 状态（未购买，购买，收货）shopid uid 
+	订单条目描述表entry
+id orderid 发货人名字 发货地址 发货人电话 发货时间 发货数量 
+
+-------------创建数据库
+create database shopping CHARACTER SET utf8 COLLATE utf8_general_ci;
