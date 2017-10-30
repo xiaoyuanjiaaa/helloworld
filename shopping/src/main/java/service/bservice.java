@@ -37,16 +37,15 @@ public class bservice {
 	public Object load(Class clas,Integer id){
 		return dao.load(clas, id);
 	}
-	
 	public static void main(String[] args) {
 		ApplicationContext ac=new ClassPathXmlApplicationContext("/app-core.xml");
 		bservice service=(bservice)ac.getBean("bservice");
 		users u=new users();
 		u.setUsername("วเม๚");
 		u.setPassword("123");
-		u.setUserImg("");
+		u.setUserImg("/shopping/back/images/img14.png");
 		u.setUserRank("SSS");
-//		service.add(u);
+		service.add(u);
 		order order=new order();
 		order.setOrderNo("P123");
 		order.setCou(100);
@@ -56,9 +55,8 @@ public class bservice {
 		order.setState("0");
 		order.setUserid(1);
 //		service.add(order);
-
 		
-		for (Object o : service.select("from order", null)) {
+		for (Object o : service.select("from users", null)) {
 			System.out.println(o);
 		}
 	}

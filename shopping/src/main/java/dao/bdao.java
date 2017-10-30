@@ -31,7 +31,7 @@ public class bdao extends HibernateDaoSupport{
 	
 	public Object load(Class clas,Integer id){
 		return super.getHibernateTemplate().get(clas, id);
-	
 	}
+
 
 }

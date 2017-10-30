@@ -23,6 +23,14 @@ public class shop {
 	private String vender;//厂家
 	private String collection;//收藏
 	private Integer num;//数量
+	//private String brand;//品牌
+	private String MBRAM;//运行内存
+	private String ROM;//存储内存
+	private String CPU;//中央处理器
+	private String os;//操作系统版本
+	private String resolution;//分辨率
+	private String mweight;//机身重量
+
 	//外键
 	private Integer sortid;
 	@ManyToOne
@@ -94,11 +102,55 @@ public class shop {
 	public void setSort(sort sort) {
 		this.sort = sort;
 	}
+/*	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}*/
+	public String getMBRAM() {
+		return MBRAM;
+	}
+	public void setMBRAM(String mBRAM) {
+		MBRAM = mBRAM;
+	}
+	public String getROM() {
+		return ROM;
+	}
+	public void setROM(String rOM) {
+		ROM = rOM;
+	}
+	public String getCPU() {
+		return CPU;
+	}
+	public void setCPU(String cPU) {
+		CPU = cPU;
+	}
+	public String getOs() {
+		return os;
+	}
+	public void setOs(String os) {
+		this.os = os;
+	}
+	public String getResolution() {
+		return resolution;
+	}
+	public void setResolution(String resolution) {
+		this.resolution = resolution;
+	}
+	public String getMweight() {
+		return mweight;
+	}
+	public void setMweight(String mweight) {
+		this.mweight = mweight;
+	}
 	@Override
 	public String toString() {
 		return "shop [shopId=" + shopId + ", shopName=" + shopName + ", shopImg=" + shopImg + ", price=" + price
 				+ ", sole=" + sole + ", quality=" + quality + ", vender=" + vender + ", collection=" + collection
-				+ ", num=" + num + ", sortid=" + sortid + ", sort=" + sort + "]";
+				+ ", num=" + num + ", MBRAM=" + MBRAM + ", ROM=" + ROM + ", CPU=" + CPU + ", os="
+				+ os + ", resolution=" + resolution + ", mweight=" + mweight + ", sortid=" + sortid + ", sort=" + sort
+				+ "]";
 	}
 	
 }

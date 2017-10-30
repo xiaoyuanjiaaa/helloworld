@@ -10,6 +10,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name="ordershop")
 public class order {
@@ -18,6 +22,8 @@ public class order {
 	private Integer orderId;
 	private String orderNo;
 	private Integer cou;//数量
+	@JsonFormat(pattern="yyyy-MM-dd",locale="GTM+8")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date orderTime;
 	private Float orderprice;
 	private Float total;//总价

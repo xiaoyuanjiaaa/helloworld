@@ -10,6 +10,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name="entry")
 public class entry {
@@ -19,6 +23,8 @@ public class entry {
 	private String sendName;
 	private String sendAddress;
 	private String tel;
+	@JsonFormat(pattern="yyyy-MM-dd",locale="GTM+8")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date sendTime;
 	private Integer sendCount;
 	//Íâ¼ü

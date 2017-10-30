@@ -19,10 +19,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class users {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int 	userId;
+	private Integer userId;
 	private String	username;
 	private String	password;
-	private String userImg;//头像	
+	private String userImg;//头像
 	private String userRank;//等级
 	
 	@OneToMany(cascade=CascadeType.ALL,mappedBy="users",fetch=FetchType.LAZY)
